@@ -1,31 +1,39 @@
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import { useState } from 'react';
+import './PropertyCard.css';
+import heroImage from "../assets/hero-image.png";
+import { FaRegHeart, FaHeart } from 'react-icons/fa';
+
 
 export default function MediaCard() {
+  // Initialize state for the favorite status (false for unfavorited)
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  // Function to handle the click event and toggle the state
+  const handleClick = () => {
+    setIsFavorite(!isFavorite);
+    // You can add logic here to interact with an API or update a parent component's state
+    console.log(`Item is now ${isFavorite ? 'unfavorited' : 'favorited'}`);
+  };
+
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
-        title="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+    <div className="property-card">
+        <div className="property-image">
+            <img src={heroImage} alt="Property" />
+            <button
+      onClick={handleClick}
+      className={`favorite-button ${isFavorite ? 'favorited' : ''}`}
+      aria-label={isFavorite ? "Unfavorite" : "Favorite"}
+    >
+      {/* Conditionally render the filled or outlined heart icon */}
+      {isFavorite ? <FaHeart /> : <FaRegHeart />}
+    </button>
+        </div>
+        <div className="property-details">
+            <h3 className="property-title">Beautiful Family Home</h3>
+            <p className="property-price">£350,000</p>
+            <p className="property-beds">3 Beds • 2 Baths • 1500 sqft</p>
+            <p className="property-postcode">Postcode: AB12 3CD</p>
+        </div>
+    </div>
   );
 }
