@@ -13,29 +13,29 @@ const typeOptions = [
   { value: "Flat", label: "Flat" }
 ];
 
-export default function SearchForm({ filters, setFilters }) {
+export default function SearchForm() {
+  const [criteria, setCriteria] = useState({
+    type: "any",
+    minPrice: "",
+    maxPrice: "",
+    minBeds: "",
+    maxBeds: "",
+    dateAddedAfter: null,
+    postcode: ""
+  });
+
   const handleTypeChange = (option) => {
-    setFilters({ ...filters, type: option?.value || "any" });
+    setCriteria({ ...criteria, type: option?.value || "any" });
   };
 
   const handleChange = (e) => {
-    setFilters({ ...filters, [e.target.name]: e.target.value });
+    setCriteria({ ...criteria, [e.target.name]: e.target.value });
   };
 
-  const handleDateChange = (date) => {
-    setFilters({ ...filters, dateAddedAfter: date });
-  };
-
-  const handleReset = () => {
-    setFilters({
-      type: "any",
-      minPrice: "",
-      maxPrice: "",
-      minBeds: "",
-      maxBeds: "",
-      dateAddedAfter: null,
-      postcode: ""
-    });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Search criteria:", criteria);
+    // Add your search logic here
   };
 
   return (
@@ -60,14 +60,14 @@ export default function SearchForm({ filters, setFilters }) {
                   type="number"
                   name="minPrice"
                   placeholder="Min"
-                  value={filters.minPrice}
+                  value={criteria.minPrice}
                   onChange={handleChange}
                 />
                 <input
                   type="number"
                   name="maxPrice"
                   placeholder="Max"
-                  value={filters.maxPrice}
+                  value={criteria.maxPrice}
                   onChange={handleChange}
                 />
               </div>
@@ -79,7 +79,7 @@ export default function SearchForm({ filters, setFilters }) {
                 type="text"
                 name="postcode"
                 placeholder="e.g. BR1"
-                value={filters.postcode}
+                value={criteria.postcode}
                 onChange={handleChange}
               />
             </div>
@@ -87,16 +87,12 @@ export default function SearchForm({ filters, setFilters }) {
             <div className="form-group">
               <label>Added After</label>
               <DatePicker
-                selected={filters.dateAddedAfter}
-                onChange={handleDateChange}
+                selected={criteria.dateAddedAfter}
+                onChange={(date) =>
+                  setCriteria({ ...criteria, dateAddedAfter: date })
+                }
                 placeholderText="Select Date"
               />
-            </div>
-
-            <div className="form-group">
-              <button type="button" onClick={handleReset} className="reset-button">
-                Reset Filters
-              </button>
             </div>
           </div>
       </Container>

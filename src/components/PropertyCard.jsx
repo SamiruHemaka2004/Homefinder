@@ -31,7 +31,7 @@ export default function MediaCard({property}) {
             </div>
         </div>
         <div className="property-details">
-            <p className="property-price">£{property.price.toLocaleString()}</p>
+            <p className="property-price">{property.price}</p>
             <p className="property-beds">{property.beds} Beds • {property.baths} Baths • {property.sqft} sqft</p>
             <p className="property-postcode">Postcode: {property.postcode}</p>
         </div>
