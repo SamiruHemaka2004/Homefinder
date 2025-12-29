@@ -1,4 +1,4 @@
-import PropertiesPage from "./components/header.jsx";
+import PropertiesPage from "./pages/PropertiesPage.jsx";
 
 function App() {
   return <PropertiesPage />;
