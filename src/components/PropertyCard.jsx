@@ -4,7 +4,7 @@ import heroImage from "../assets/hero-image.png";
 import { FaRegHeart, FaHeart } from 'react-icons/fa';
 
 
-export default function MediaCard() {
+export default function MediaCard({property}) {
   // Initialize state for the favorite status (false for unfavorited)
   const [isFavorite, setIsFavorite] = useState(false);
 
@@ -20,7 +20,7 @@ export default function MediaCard() {
         <div className="property-image">
             <img src={heroImage} alt="Property" />
             <div className='title-fav-div'>
-                <h3 className="property-title">Beautiful Family Home</h3>
+                <h3 className="property-title">{property.title}</h3>
                 <button onClick={handleClick}
                 className={`favorite-button ${isFavorite ? 'favorited' : ''}`}
                 aria-label={isFavorite ? "Unfavorite" : "Favorite"}
@@ -31,9 +31,9 @@ export default function MediaCard() {
             </div>
         </div>
         <div className="property-details">
-            <p className="property-price">£350,000</p>
-            <p className="property-beds">3 Beds • 2 Baths • 1500 sqft</p>
-            <p className="property-postcode">Postcode: AB12 3CD</p>
+            <p className="property-price">{property.price}</p>
+            <p className="property-beds">{property.beds} Beds • {property.baths} Baths • {property.sqft} sqft</p>
+            <p className="property-postcode">Postcode: {property.postcode}</p>
         </div>
         <div>
             <button className="view-details-button">View Details</button>
