@@ -1,0 +1,138 @@
+
+.select-card {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 218, 188, 0.6),
+    rgba(255, 141, 65, 0.6)
+  );
+  backdrop-filter: blur(4px);
+  border: #ffeee7 solid 1px;
+  padding: 20px 30px;
+  border-radius: 2cqmax;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  gap: 2%;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 95%;
+  justify-content: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 150px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.form-group .row {
+  display: flex;
+  gap: 8px;
+}
+
+.form-group .row input {
+  flex: 1;
+  min-width: 70px;
+}
+
+/* React DatePicker Customization */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .select-card {
+    flex-direction: column;
+    align-items: stretch;
+    width: 90%;
+    padding: 15px 20px;
+    gap: 12px;
+    bottom: 50%;
+  }
+
+  .form-group {
+    min-width: 100%;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+  }
+
+  .form-group input {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  .react-datepicker__input-container input {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .select-card {
+    width: 85%;
+    padding: 12px 15px;
+    gap: 10px;
+    bottom: 12%;
+  }
+
+  .form-group {
+    min-width: 100%;
+  }
+
+  .form-group label {
+    font-size: 0.8rem;
+  }
+
+  .form-group input {
+    font-size: 0.85rem;
+    padding: 5px 8px;
+  }
+
+  .form-group .row {
+    gap: 6px;
+  }
+
+  .react-datepicker__input-container input {
+    font-size: 0.85rem;
+    padding: 5px 8px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .select-card {
+    gap: 10px;
+    padding: 18px 25px;
+    bottom: 18%;
+  }
+
+  .form-group {
+    min-width: 140px;
+  }
+}
