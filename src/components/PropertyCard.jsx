@@ -19,17 +19,18 @@ export default function MediaCard() {
     <div className="property-card">
         <div className="property-image">
             <img src={heroImage} alt="Property" />
-            <button
-      onClick={handleClick}
-      className={`favorite-button ${isFavorite ? 'favorited' : ''}`}
-      aria-label={isFavorite ? "Unfavorite" : "Favorite"}
-    >
-      {/* Conditionally render the filled or outlined heart icon */}
-      {isFavorite ? <FaHeart /> : <FaRegHeart />}
-    </button>
+            <div className='title-fav-div'>
+                <h3 className="property-title">Beautiful Family Home</h3>
+                <button onClick={handleClick}
+                className={`favorite-button ${isFavorite ? 'favorited' : ''}`}
+                aria-label={isFavorite ? "Unfavorite" : "Favorite"}
+                >
+                {/* Conditionally render the filled or outlined heart icon */}
+                {isFavorite ? <FaHeart /> : <FaRegHeart />}
+                </button>
+            </div>
         </div>
         <div className="property-details">
-            <h3 className="property-title">Beautiful Family Home</h3>
             <p className="property-price">£350,000</p>
             <p className="property-beds">3 Beds • 2 Baths • 1500 sqft</p>
             <p className="property-postcode">Postcode: AB12 3CD</p>
