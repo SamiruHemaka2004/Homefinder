@@ -35,6 +35,10 @@ export default function MediaCard() {
             <p className="property-beds">3 Beds • 2 Baths • 1500 sqft</p>
             <p className="property-postcode">Postcode: AB12 3CD</p>
         </div>
+        <div>
+            <button className="view-details-button">View Details</button>
+            <button className="contact-agent-button">Contact Agent</button>
+        </div>
     </div>
   );
 }
