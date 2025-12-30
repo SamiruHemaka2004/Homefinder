@@ -1,0 +1,51 @@
+.favourite-card {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  background: #fdfaf6;
+}
+
+.favourite-thumb {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.favourite-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.favourite-title {
+  margin: 0;
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
+.favourite-price {
+  margin: 0;
+  color: #a3450e;
+  font-weight: 600;
+}
+
+.favourite-remove {
+  border: none;
+  background: #fff4ed;
+  color: #a3450e;
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.favourite-remove:hover {
+  background: #a3450e;
+  color: #ffffff;
+}

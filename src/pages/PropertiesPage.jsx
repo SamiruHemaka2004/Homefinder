@@ -1,9 +1,11 @@
-import { useState, useMemo } from "react";
+import { useMemo, useState } from "react";
 import Header from "../components/header.jsx";
 import HeroImage from "../components/HeroImage.jsx";
 import SearchForm from "../components/SearchForm.jsx";
 import CardsGrid from "../components/CardsGrid.jsx";
+import FavouriteCard from "../components/FavouriteCard.jsx";
 import { properties } from "../data/properties.js";
+import "./PropertiesPage.css";
 
 export default function PropertiesPage() {
   // State to store filter criteria
@@ -16,6 +18,8 @@ export default function PropertiesPage() {
     dateAddedAfter: null,
     postcode: ""
   });
+
+  const [favourites, setFavourites] = useState([]);
 
   // Filter properties based on criteria
   const filteredProperties = useMemo(() => {
@@ -55,12 +59,55 @@ export default function PropertiesPage() {
     });
   }, [filters]);
 
+  const toggleFavourite = (property) => {
+    setFavourites((current) => {
+      const isSaved = current.some((item) => item.id === property.id);
+      if (isSaved) {
+        return current.filter((item) => item.id !== property.id);
+      }
+      return [...current, property];
+    });
+  };
+
+  const removeFavourite = (id) => {
+    setFavourites((current) => current.filter((item) => item.id !== id));
+  };
+
   return (
     <>
       <Header />
       <HeroImage />
       <SearchForm filters={filters} setFilters={setFilters} />
-      <CardsGrid data={filteredProperties} />
+      <div className="page-layout">
+        <div className="cards-column">
+          <CardsGrid
+            data={filteredProperties}
+            favourites={favourites}
+            onToggleFavourite={toggleFavourite}
+          />
+        </div>
+
+        <aside className="favourites-panel">
+          <div className="favourites-header">
+            <h3>Favourites</h3>
+            <span>{favourites.length}</span>
+          </div>
+
+          {favourites.length === 0 ? (
+            <p className="favourites-empty">Tap the heart on a home to save it here.</p>
+          ) : (
+            <ul className="favourites-list">
+              {favourites.map((property) => (
+                <FavouriteCard
+                  key={property.id}
+                  property={property}
+                  onRemove={removeFavourite}
+                />
+              ))}
+            </ul>
+          )}
+        </aside>
+      </div>
     </>
   );
 }
