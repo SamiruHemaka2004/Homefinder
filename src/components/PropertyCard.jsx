@@ -4,6 +4,10 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 export default function PropertyCard({ property, isFavorite, onToggleFavourite }) {
   const imageSrc = property.image && property.image.trim() !== "" ? property.image : heroImage;
+  const bedsLabel = property.beds ? `${property.beds} Beds` : null;
+  const typeLabel = property.type ? property.type : null;
+  const tenureLabel = property.tenure ? property.tenure : null;
+  const metaLine = [bedsLabel, typeLabel || tenureLabel].filter(Boolean).join(" • ");
 
   return (
     <div className="property-card">
@@ -29,8 +33,8 @@ export default function PropertyCard({ property, isFavorite, onToggleFavourite }
       </div>
       <div className="property-details">
         <p className="property-price">£{property.price.toLocaleString()}</p>
-        <p className="property-beds">{property.beds} Beds • {property.baths} Baths • {property.sqft} sqft</p>
-        <p className="property-postcode">Postcode: {property.postcode}</p>
+        {metaLine && <p className="property-beds">{metaLine}</p>}
+        {property.location && <p className="property-postcode">{property.location}</p>}
       </div>
       <div className="property-actions">
         <button className="view-details-button">View Details</button>
