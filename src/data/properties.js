@@ -14,21 +14,26 @@ const derivePostcode = (location = "") => {
 };
 
 export const properties = (propertiesJson.properties || []).map((item) => {
-  const location = item.location || item.description || "";
+  const location = item.location || "";
   return {
     id: item.id,
-    title: location,
+    title: item.title || location,
     type: item.type || "any",
     price: Number(item.price) || 0,
-    beds: item.bedrooms ?? 0,
-    baths: item.bathrooms ?? 0,
+    beds: item.beds ?? 0,
+    baths: item.baths ?? 0,
     sqft: item.sqft ?? null,
-    postcode: derivePostcode(item.location),
-    image: item.picture ? `/${item.picture}` : "",
-    dateAdded: parseDate(item.added),
+    postcode: item.postcode || derivePostcode(location),
+    image: item.image || "",
+    images: item.images || [],
+    floorPlan: item.floorPlan || "",
+    googleMapUrl: item.googleMapUrl || "",
+    dateAdded: item.dateAdded || parseDate(item.added).getTime(),
     tenure: item.tenure,
     location,
-    description: item.description,
+    shortDescription: item.shortDescription || "",
+    longDescription: item.longDescription || item.description || "",
+    description: item.longDescription || item.description || "",
     url: item.url
   };
 });

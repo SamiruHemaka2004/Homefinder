@@ -1,13 +1,19 @@
 import "./PropertyCard.css";
+import { useNavigate } from "react-router-dom";
 import heroImage from "../assets/hero-image.png";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 export default function PropertyCard({ property, isFavorite, onToggleFavourite }) {
+  const navigate = useNavigate();
   const imageSrc = property.image && property.image.trim() !== "" ? property.image : heroImage;
   const bedsLabel = property.beds ? `${property.beds} Beds` : null;
   const typeLabel = property.type ? property.type : null;
   const tenureLabel = property.tenure ? property.tenure : null;
   const metaLine = [bedsLabel, typeLabel || tenureLabel].filter(Boolean).join(" • ");
+
+  const handleViewDetails = () => {
+    navigate(`/property/${property.id}`);
+  };
 
   return (
     <div className="property-card">
@@ -37,7 +43,9 @@ export default function PropertyCard({ property, isFavorite, onToggleFavourite }
         {property.location && <p className="property-postcode">{property.location}</p>}
       </div>
       <div className="property-actions">
-        <button className="view-details-button">View Details</button>
+        <button className="view-details-button" onClick={handleViewDetails}>
+          View Details
+        </button>
         <button className="contact-agent-button">Contact Agent</button>
       </div>
     </div>

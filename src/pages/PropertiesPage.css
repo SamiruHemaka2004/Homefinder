@@ -18,6 +18,10 @@
   border-radius: 16px;
   padding: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border: 2px solid #a3450e;
+  background-color: rgb(248, 239, 232);
+
+
 }
 
 .favourites-header {
