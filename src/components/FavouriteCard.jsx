@@ -4,8 +4,22 @@ import heroImage from "../assets/hero-image.png";
 export default function FavouriteCard({ property, onRemove }) {
 	const imageSrc = property.image && property.image.trim() !== "" ? property.image : heroImage;
 
+	const handleDragStart = (e) => {
+		if (e.target.closest("button")) {
+			e.preventDefault();
+			return;
+		}
+		e.dataTransfer.effectAllowed = "move";
+		e.dataTransfer.setData("application/json", JSON.stringify(property));
+	};
+
 	return (
-		<li className="favourite-card">
+		<li 
+			className="favourite-card"
+			draggable="true"
+			onDragStart={handleDragStart}
+			style={{ cursor: "grab" }}
+		>
 			<img
 				className="favourite-thumb"
 				src={imageSrc}

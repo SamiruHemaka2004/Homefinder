@@ -79,7 +79,26 @@ export default function PropertiesPage() {
       <HeroImage />
       <SearchForm filters={filters} setFilters={setFilters} />
       <div className="page-layout">
-        <div className="cards-column">
+        <div 
+          className="cards-column"
+          onDragOver={(e) => {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = "move";
+          }}
+          onDrop={(e) => {
+            e.preventDefault();
+            try {
+              const droppedProperty = JSON.parse(e.dataTransfer.getData("application/json"));
+              if (droppedProperty && droppedProperty.id) {
+                if (favourites.some((fav) => fav.id === droppedProperty.id)) {
+                  toggleFavourite(droppedProperty);
+                }
+              }
+            } catch (err) {
+              console.log("Drop error:", err);
+            }
+          }}
+        >
           <CardsGrid
             data={filteredProperties}
             favourites={favourites}
@@ -87,7 +106,26 @@ export default function PropertiesPage() {
           />
         </div>
 
-        <aside className="favourites-panel">
+        <aside 
+          className="favourites-panel"
+          onDragOver={(e) => {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = "copy";
+          }}
+          onDrop={(e) => {
+            e.preventDefault();
+            try {
+              const droppedProperty = JSON.parse(e.dataTransfer.getData("application/json"));
+              if (droppedProperty && droppedProperty.id) {
+                if (!favourites.some((fav) => fav.id === droppedProperty.id)) {
+                  toggleFavourite(droppedProperty);
+                }
+              }
+            } catch (err) {
+              console.log("Drop error:", err);
+            }
+          }}
+        >
           <div className="favourites-header">
             <h3>Favourites</h3>
             <span>{favourites.length}</span>

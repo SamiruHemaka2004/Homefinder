@@ -15,8 +15,23 @@ export default function PropertyCard({ property, isFavorite, onToggleFavourite }
     navigate(`/property/${property.id}`);
   };
 
+  const handleDragStart = (e) => {
+    // Only allow drag if not clicking on buttons
+    if (e.target.closest("button")) {
+      e.preventDefault();
+      return;
+    }
+    e.dataTransfer.effectAllowed = "copy";
+    e.dataTransfer.setData("application/json", JSON.stringify(property));
+  };
+
   return (
-    <div className="property-card">
+    <div 
+      className="property-card"
+      draggable="true"
+      onDragStart={handleDragStart}
+      style={{ cursor: "grab" }}
+    >
       <div className="property-image">
         <img
           src={imageSrc}
