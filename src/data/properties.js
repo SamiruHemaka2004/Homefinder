@@ -1,4 +1,14 @@
 import propertiesJson from "./properties.json";
+import floorplan6 from "../assets/floorPlan/floorplan6.png";
+import floorplan7 from "../assets/floorPlan/floorplan7.png";
+
+// Map floorplan paths to imported images
+const floorplanMap = {
+  "src\\assets\\floorPlan\\floorplan6.png": floorplan6,
+  "./assets/floorPlan/floorplan6.png": floorplan6,
+  "src\\assets\\floorPlan\\floorplan7.png": floorplan7,
+  "./assets/floorPlan/floorplan7.png": floorplan7,
+};
 
 const parseDate = (added) => {
   if (!added) return new Date();
@@ -26,7 +36,7 @@ export const properties = (propertiesJson.properties || []).map((item) => {
     postcode: item.postcode || derivePostcode(location),
     image: item.image || "",
     images: item.images || [],
-    floorPlan: item.floorPlan || "",
+    floorPlan: floorplanMap[item.floorPlan] || item.floorPlan || "",
     googleMapUrl: item.googleMapUrl || "",
     dateAdded: item.dateAdded || parseDate(item.added).getTime(),
     tenure: item.tenure,
@@ -34,6 +44,6 @@ export const properties = (propertiesJson.properties || []).map((item) => {
     shortDescription: item.shortDescription || "",
     longDescription: item.longDescription || item.description || "",
     description: item.longDescription || item.description || "",
-    url: item.url
+    url: item.url,
   };
 });
