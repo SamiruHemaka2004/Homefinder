@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { properties } from "../data/properties.js";
 import Header from "../components/header.jsx";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import "./PropertyDetailPage.css";
 
 export default function PropertyDetailPage() {
@@ -10,6 +11,30 @@ export default function PropertyDetailPage() {
   const property = properties.find((p) => p.id === propertyId);
   const [mainImage, setMainImage] = useState(property?.images[0] || "");
   const [activeTab, setActiveTab] = useState("description");
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  useEffect(() => {
+    const storedFavorites = JSON.parse(localStorage.getItem("favourites") || "[]");
+    const isFav = storedFavorites.some((fav) => fav.id === propertyId);
+    setIsFavorite(isFav);
+  }, [propertyId]);
+
+  const toggleFavorite = () => {
+    const storedFavorites = JSON.parse(localStorage.getItem("favourites") || "[]");
+    let updatedFavorites;
+
+    if (isFavorite) {
+      updatedFavorites = storedFavorites.filter((fav) => fav.id !== propertyId);
+    } else {
+      updatedFavorites = [...storedFavorites, property];
+    }
+
+    localStorage.setItem("favourites", JSON.stringify(updatedFavorites));
+    setIsFavorite(!isFavorite);
+    
+    // Dispatch custom event to notify other components
+    window.dispatchEvent(new Event("favouritesChanged"));
+  };
 
   if (!property) {
     return (
@@ -29,20 +54,6 @@ export default function PropertyDetailPage() {
     <>
       <Header />
       <div className="detail-container">
-        <button className="back-button" onClick={() => navigate("/")}>
-          ← Back
-        </button>
-
-        {/* SHORT DESCRIPTION */}
-        <div className="short-info">
-          <h1>{property.title}</h1>
-          <p className="property-type">{property.type}</p>
-          <p className="property-price">£{property.price.toLocaleString()}</p>
-          <p className="property-location">
-          {property.location}
-          </p>
-        </div>
-
         {/* MAIN IMAGE SECTION */}
         <div className="image-section">
           <div className="main-image-container">
@@ -61,6 +72,25 @@ export default function PropertyDetailPage() {
               />
             ))}
           </div>
+        </div>
+
+        {/* SHORT DESCRIPTION */}
+        <div className="short-info">
+          <div className="title-fav-container">
+            <h1>{property.title}</h1>
+            <button
+              onClick={toggleFavorite}
+              className={`favorite-button ${isFavorite ? "favorited" : ""}`}
+              aria-label={isFavorite ? "Remove from favourites" : "Add to favourites"}
+            >
+              {isFavorite ? <FaHeart /> : <FaRegHeart />}
+            </button>
+          </div>
+          <p className="property-type">{property.type}</p>
+          <p className="property-price">£{property.price.toLocaleString()}</p>
+          <p className="property-location">
+          {property.location}
+          </p>
         </div>
 
         {/* TABS SECTION */}

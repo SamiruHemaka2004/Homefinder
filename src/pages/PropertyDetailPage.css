@@ -2,26 +2,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f9f9f9;
   min-height: 100vh;
-}
-
-.back-button {
-  background-color: #ff7a0d;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 100vw;
-  font-size: 16px;
-  cursor: pointer;
-  margin-bottom: 20px;
-  transition: background-color 0.3s ease;
-
-}
-
-.back-button:hover {
-  background-color: #c44f02;
-  color: #eeeeee;
 }
 
 .error-message {
@@ -34,10 +15,18 @@
 /* SHORT DESCRIPTION SECTION */
 .short-info {
   background-color: white;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 40px;
+  border-radius: 40px;
   margin-bottom: 30px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: #e46600 2px solid;
+  box-shadow: 0 4px 12px rgba(255, 115, 0, 0.2);
+}
+
+.title-fav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
 }
 
 .short-info h1 {
@@ -66,11 +55,32 @@
   font-size: 16px;
 }
 
+.favorite-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  color: #ccc;
+  transition: color 0.3s ease;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorite-button.favorited {
+  color: #ff0000;
+}
+
+.favorite-button:hover {
+  color: #ff4444;
+}
+
 /* IMAGE SECTION */
 .image-section {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 70px;
   margin-bottom: 30px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -78,14 +88,14 @@
 .main-image-container {
   width: 100%;
   margin-bottom: 20px;
-  border-radius: 8px;
+  border-radius: 50px;
   overflow: hidden;
   background-color: #f0f0f0;
 }
 
 .main-image {
   width: 100%;
-  height: 400px;
+  height: 500px;
   object-fit: cover;
   display: block;
 }
@@ -101,7 +111,7 @@
   width: 100%;
   height: 100px;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
   opacity: 0.7;
   transition: all 0.3s ease;
@@ -114,14 +124,14 @@
 
 .thumbnail.active {
   opacity: 1;
-  border: 2px solid #007bff;
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  border: 2px solid #ff8800;
+  box-shadow: 0 0 8px rgba(255, 166, 0, 0.5);
 }
 
 /* TABS SECTION */
 .tabs-section {
   background-color: white;
-  border-radius: 8px;
+  border-radius: 30px;
   margin-bottom: 30px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -154,9 +164,9 @@
 }
 
 .tab-button.active {
-  color: #007bff;
-  border-bottom: 3px solid #007bff;
-  background-color: white;
+  color: #ff8800;
+  border-bottom: 3px solid #ff9100;
+  background-color: rgb(255, 237, 223);
 }
 
 .tab-content {
@@ -204,7 +214,7 @@
 .spec-item {
   padding: 10px;
   background-color: white;
-  border-left: 4px solid #007bff;
+  border-left: 4px solid #ff7300;
   border-radius: 3px;
 }
 
@@ -219,20 +229,20 @@
   text-align: center;
   padding: 20px;
   background-color: #f9f9f9;
-  border-radius: 5px;
+  border-radius: 80px;
 }
 
 .floorplan-image {
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 60px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* MAP CONTAINER */
 .map-container {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 60px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }

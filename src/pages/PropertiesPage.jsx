@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import Header from "../components/header.jsx";
 import HeroImage from "../components/HeroImage.jsx";
 import SearchForm from "../components/SearchForm.jsx";
@@ -19,7 +19,37 @@ export default function PropertiesPage() {
     postcode: ""
   });
 
-  const [favourites, setFavourites] = useState([]);
+  const [favourites, setFavourites] = useState(() => {
+    const stored = localStorage.getItem("favourites");
+    return stored ? JSON.parse(stored) : [];
+  });
+
+  // Sync favourites with localStorage
+  useEffect(() => {
+    localStorage.setItem("favourites", JSON.stringify(favourites));
+    // Dispatch event after localStorage is updated
+    window.dispatchEvent(new Event("favouritesChanged"));
+  }, [favourites]);
+
+  // Listen for storage changes (from PropertyDetailPage or other tabs)
+  useEffect(() => {
+    const handleStorageChange = () => {
+      const stored = localStorage.getItem("favourites");
+      if (stored) {
+        setFavourites(JSON.parse(stored));
+      }
+    };
+
+    // Listen for custom event (for same-tab updates)
+    window.addEventListener("favouritesChanged", handleStorageChange);
+    // Listen for storage event (for cross-tab updates)
+    window.addEventListener("storage", handleStorageChange);
+
+    return () => {
+      window.removeEventListener("favouritesChanged", handleStorageChange);
+      window.removeEventListener("storage", handleStorageChange);
+    };
+  }, []);
 
   // Filter properties based on criteria
   const filteredProperties = useMemo(() => {
@@ -62,10 +92,11 @@ export default function PropertiesPage() {
   const toggleFavourite = (property) => {
     setFavourites((current) => {
       const isSaved = current.some((item) => item.id === property.id);
-      if (isSaved) {
-        return current.filter((item) => item.id !== property.id);
-      }
-      return [...current, property];
+      const updated = isSaved
+        ? current.filter((item) => item.id !== property.id)
+        : [...current, property];
+      
+      return updated;
     });
   };
 
