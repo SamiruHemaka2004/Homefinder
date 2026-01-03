@@ -13,13 +13,16 @@ function Header() {
          <Container maxWidth="lg">
         <nav>
           <div>
-          <img
-            className="websiteLogo"
-            src={websiteLogo}
-            alt="App Logo"
+          <button 
             onClick={() => navigate('/')}
-            style={{ cursor: 'pointer' }}
-          />
+            style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
+          >
+            <img
+              className="websiteLogo"
+              src={websiteLogo}
+              alt="App Logo"
+            />
+          </button>
         </div>
         <div className='header-list'>
           <ul>
