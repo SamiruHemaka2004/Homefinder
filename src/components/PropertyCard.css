@@ -10,10 +10,10 @@
 .property-image img {
   width: 100%;
   border-radius: 3vw;
-  padding: 10px;
+  padding: 3%;
 }
 .property-details {
-  padding-left: 18px;
+  padding: 0 0 5% 10%;
   text-align: left;
 }
 
@@ -61,20 +61,26 @@
 .property-actions {
   display: flex;
   gap: 10px;
-  padding: 0 18px 16px 18px;
+  padding: 0 18px 16px 20px;
+  justify-content: center;
 }
 
-.property-actions button {
-  flex: 1;
-  padding: 10px 12px;
-  border-radius: 10px;
-  border: 1px solid #a3450e;
-  background: #fff;
-  cursor: pointer;
+.view-details-button {
+  background-color: #ff8800;
+  color: white;
+  border-radius: 100vw;
+  width: 50%;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
-
-.property-actions button:hover {
-  background: #a3450e;
-  color: #fff;
+.view-details-button:hover {
+  background-color: #e46600;
+  color: #eeeeee;
+}
+.contact-agent-button{
+  border: #ff8800 1px solid;
+  color: rgb(80, 79, 79); 
+}
+.contact-agent-button:hover {
+  background-color: #ffebd4;
+  color: rgb(85, 85, 85);
 }

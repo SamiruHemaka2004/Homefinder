@@ -7,19 +7,21 @@
 }
 
 .back-button {
-  background-color: #007bff;
+  background-color: #ff7a0d;
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 100vw;
   font-size: 16px;
   cursor: pointer;
   margin-bottom: 20px;
   transition: background-color 0.3s ease;
+
 }
 
 .back-button:hover {
-  background-color: #0056b3;
+  background-color: #c44f02;
+  color: #eeeeee;
 }
 
 .error-message {
@@ -255,23 +257,27 @@
 }
 
 .contact-button {
-  background-color: #007bff;
+  background-color: #ff8800;
   color: white;
+  border-radius: 100vw;
 }
 
 .contact-button:hover {
-  background-color: #0056b3;
+  background-color: #e46600;
+  color: #eeeeee;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 115, 0, 0.3);
 }
 
 .enquiry-button {
   background-color: #28a745;
   color: white;
+  border-radius: 100vw;
 }
 
 .enquiry-button:hover {
   background-color: #218838;
+  color: #eeeeee;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
 }

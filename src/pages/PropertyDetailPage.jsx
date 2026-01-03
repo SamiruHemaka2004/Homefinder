@@ -30,7 +30,7 @@ export default function PropertyDetailPage() {
       <Header />
       <div className="detail-container">
         <button className="back-button" onClick={() => navigate("/")}>
-          ← Back to Properties
+          ← Back
         </button>
 
         {/* SHORT DESCRIPTION */}
@@ -39,7 +39,7 @@ export default function PropertyDetailPage() {
           <p className="property-type">{property.type}</p>
           <p className="property-price">£{property.price.toLocaleString()}</p>
           <p className="property-location">
-            📍 {property.location}
+          {property.location}
           </p>
         </div>
 
