@@ -50,6 +50,7 @@ export default function SearchForm({ filters, setFilters }) {
                 options={typeOptions}
                 onChange={handleTypeChange}
                 placeholder="Select Type"
+                className="type-select"  
               />
             </div>
 
@@ -78,6 +79,7 @@ export default function SearchForm({ filters, setFilters }) {
               <div className="row">
                 <input
                   type="number"
+                  className="minBeds"
                   name="minBeds"
                   placeholder="Min"
                   value={filters.minBeds}
@@ -86,6 +88,7 @@ export default function SearchForm({ filters, setFilters }) {
                 />
                 <input
                   type="number"
+                  className="maxBeds"
                   name="maxBeds"
                   placeholder="Max"
                   value={filters.maxBeds}

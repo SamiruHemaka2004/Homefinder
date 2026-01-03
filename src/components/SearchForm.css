@@ -74,7 +74,9 @@
   background-color: #eb691e;  
   color:#ffeee7;
 }
-
+.minBeds ,.maxBeds {
+  width: 80px;
+}
 @media (max-width: 768px) {
   .select-card {
     flex-direction: column;
