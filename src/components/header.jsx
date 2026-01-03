@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './header.css'
-import websiteLogo from '../assets/web-Logo.svg'
+import websiteLogo from '../assets/web-Logo.png'
 import Container from '@mui/material/Container';
 
 function Header() {
