@@ -1,24 +1,31 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './header.css'
 import websiteLogo from '../assets/web-Logo.png'
 import Container from '@mui/material/Container';
 
 function Header() {
   const [count, setCount] = useState(0)
+  const navigate = useNavigate()
 
   return (
     <>
-         <Container maxWidth="md">
+         <Container maxWidth="lg">
         <nav>
           <div>
-          <img className="websiteLogo" src={websiteLogo} alt="App Logo" />
+          <img
+            className="websiteLogo"
+            src={websiteLogo}
+            alt="App Logo"
+            onClick={() => navigate('/')}
+            style={{ cursor: 'pointer' }}
+          />
         </div>
-        <div>
+        <div className='header-list'>
           <ul>
-            <li><button>Home</button></li>
-            <li><button>About</button></li>
+            <li><button onClick={() => navigate('/about')}>About</button></li>
             <li><button>Contact</button></li>
-            <li><button id="signUp">Contained</button></li>
+            <li><button id="signUp">Sign Up</button></li>
           </ul>
         </div>
           

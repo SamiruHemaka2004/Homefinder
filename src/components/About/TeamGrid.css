@@ -1,0 +1,16 @@
+.about-section.team {
+  padding-top: 10px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+  justify-items: center;
+}
+
+.team-sub {
+  color: #7a8090;
+  margin: 6px 0 22px;
+}

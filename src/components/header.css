@@ -11,6 +11,9 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+.header-list{
+ padding-right: 2rem;
+}
 ul {
   list-style: none;
   display: flex;
@@ -52,7 +55,6 @@ button {
   transition: ease-in-out 500ms;
 }
 button:hover {
-  border-color: #ff7402;
   color: #ff7402;
   transition: ease-in-out 500ms;
 }
