@@ -74,6 +74,28 @@ export default function SearchForm({ filters, setFilters }) {
             </div>
 
             <div className="form-group">
+              <label>Bedrooms</label>
+              <div className="row">
+                <input
+                  type="number"
+                  name="minBeds"
+                  placeholder="Min"
+                  value={filters.minBeds}
+                  onChange={handleChange}
+                  min="0"
+                />
+                <input
+                  type="number"
+                  name="maxBeds"
+                  placeholder="Max"
+                  value={filters.maxBeds}
+                  onChange={handleChange}
+                  min="0"
+                />
+              </div>
+            </div>
+
+            <div className="form-group">
               <label>Postcode</label>
               <input
                 type="text"
