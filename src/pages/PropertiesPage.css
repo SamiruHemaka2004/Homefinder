@@ -20,8 +20,6 @@
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   border: 2px solid #a3450e;
   background-color: rgb(248, 239, 232);
-
-
 }
 
 .favourites-header {
@@ -60,12 +58,46 @@
   line-height: 1.4;
 }
 
-@media (max-width: 1024px) {
+/* Tablet */
+@media (max-width: 1200px) {
+  .page-layout {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+    padding: 15px;
+  }
+}
+
+/* Mobile & Tablet Portrait */
+@media (max-width: 900px) {
   .page-layout {
     grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 15px 10px;
   }
 
   .favourites-panel {
     position: static;
+    order: -1;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .page-layout {
+    padding: 10px 5px;
+    gap: 15px;
+  }
+
+  .favourites-panel {
+    padding: 12px;
+    border-radius: 30px;
+  }
+
+  .favourites-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .favourites-empty {
+    font-size: 0.85rem;
   }
 }

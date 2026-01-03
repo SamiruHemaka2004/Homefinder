@@ -6,9 +6,27 @@
   width: 100%;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .Cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 18px;
+  }
+}
+
+/* Mobile & Tablet Portrait */
 @media (max-width: 768px) {
   .Cards-grid {
     grid-template-columns: 1fr;
+    gap: 15px;
     padding: 10px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .Cards-grid {
+    gap: 12px;
+    padding: 8px;
   }
 }

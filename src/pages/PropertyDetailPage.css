@@ -293,17 +293,75 @@
 }
 
 /* RESPONSIVE */
+/* Tablet */
+@media (max-width: 1024px) {
+  .detail-container {
+    padding: 15px;
+  }
+
+  .thumbnails {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .main-image {
+    height: 400px;
+  }
+
+  .short-info {
+    padding: 30px;
+  }
+
+  .image-section {
+    border-radius: 50px;
+  }
+}
+
+/* Mobile & Tablet Portrait */
 @media (max-width: 768px) {
+  .detail-container {
+    padding: 10px;
+  }
+
   .thumbnails {
     grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .thumbnail {
+    height: 80px;
+    border-radius: 20px;
   }
 
   .main-image {
     height: 300px;
   }
 
+  .image-section {
+    padding: 15px;
+    border-radius: 40px;
+  }
+
+  .main-image-container {
+    border-radius: 30px;
+  }
+
+  .short-info {
+    padding: 25px;
+    border-radius: 30px;
+  }
+
+  .short-info h1 {
+    font-size: 22px;
+  }
+
+  .property-price {
+    font-size: 22px;
+  }
+
   .property-specs {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .tab-buttons {
@@ -313,17 +371,109 @@
   .tab-button {
     flex: 1;
     min-width: 100px;
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .tab-content {
+    padding: 20px;
   }
 
   .contact-section {
     flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-button,
+  .enquiry-button {
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+
+  .favorite-button {
+    font-size: 24px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .detail-container {
+    padding: 8px;
+  }
+
+  .thumbnails {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .thumbnail {
+    height: 70px;
+    border-radius: 15px;
+  }
+
+  .main-image {
+    height: 250px;
+  }
+
+  .image-section {
+    padding: 12px;
+    border-radius: 30px;
+  }
+
+  .main-image-container {
+    border-radius: 25px;
+  }
+
+  .short-info {
+    padding: 20px;
+    border-radius: 25px;
+  }
+
+  .title-fav-container {
+    gap: 10px;
   }
 
   .short-info h1 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .property-price {
-    font-size: 22px;
+    font-size: 20px;
+  }
+
+  .property-type,
+  .property-location {
+    font-size: 14px;
+  }
+
+  .tab-button {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .tab-content {
+    padding: 15px;
+  }
+
+  .tab-pane h2 {
+    font-size: 1.3rem;
+  }
+
+  .tab-pane p {
+    font-size: 0.9rem;
+  }
+
+  .contact-button,
+  .enquiry-button {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .favorite-button {
+    font-size: 20px;
+  }
+
+  .floorplan-image {
+    border-radius: 15px;
   }
 }

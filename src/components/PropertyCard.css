@@ -76,11 +76,77 @@
   background-color: #e46600;
   color: #eeeeee;
 }
-.contact-agent-button{
+.contact-agent-button {
   border: #ff8800 1px solid;
-  color: rgb(80, 79, 79); 
+  color: rgb(80, 79, 79);
 }
 .contact-agent-button:hover {
   background-color: #ffebd4;
   color: rgb(85, 85, 85);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .property-card {
+    border-radius: 4vw;
+  }
+
+  .property-image img {
+    border-radius: 4vw;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .property-card {
+    border-radius: 5vw;
+  }
+
+  .property-image img {
+    border-radius: 5vw;
+    padding: 4%;
+  }
+
+  .property-details {
+    padding: 0 5% 5% 8%;
+  }
+
+  .property-details h2 {
+    font-size: 1.3em;
+  }
+
+  .title-fav-div {
+    width: 92%;
+    padding-left: 10px;
+  }
+
+  .favorite-button {
+    font-size: 20px;
+  }
+
+  .property-actions {
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 15px 15px 15px;
+  }
+
+  .view-details-button,
+  .contact-agent-button {
+    width: 100%;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .property-details h2 {
+    font-size: 1.2em;
+  }
+
+  .property-details p {
+    font-size: 0.9em;
+  }
+
+  .favorite-button {
+    font-size: 18px;
+  }
 }
