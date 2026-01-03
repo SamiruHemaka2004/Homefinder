@@ -78,7 +78,7 @@ export default function PropertyDetailPage() {
         {/* SHORT DESCRIPTION */}
         <div className="short-info">
           <div className="title-fav-container">
-            <h1>{property.title}</h1>
+            <h1>{property.location}</h1>
             <button
               onClick={toggleFavorite}
               className={`favorite-button ${isFavorite ? "favorited" : ""}`}
@@ -89,9 +89,6 @@ export default function PropertyDetailPage() {
           </div>
           <p className="property-type">{property.type}</p>
           <p className="property-price">£{property.price.toLocaleString()}</p>
-          <p className="property-location">
-          {property.location}
-          </p>
         </div>
 
         {/* TABS SECTION */}
@@ -122,13 +119,13 @@ export default function PropertyDetailPage() {
             {activeTab === "description" && (
               <div className="tab-pane">
                 <h2>Property Description</h2>
-                <p>{property.longDescription}</p>
+                <p dangerouslySetInnerHTML={{ __html: property.description }}></p>
                 <div className="property-specs">
                   <div className="spec-item">
                     <strong>Type:</strong> {property.type}
                   </div>
                   <div className="spec-item">
-                    <strong>Bedrooms:</strong> {property.beds}
+                    <strong>Bedrooms:</strong> {property.bedrooms}
                   </div>
                   <div className="spec-item">
                     <strong>Tenure:</strong> {property.tenure}

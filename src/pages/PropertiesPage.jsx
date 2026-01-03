@@ -70,10 +70,10 @@ export default function PropertiesPage() {
       }
 
       // Bedroom filters
-      if (filters.minBeds && property.beds < Number(filters.minBeds)) {
+      if (filters.minBeds && property.bedrooms < Number(filters.minBeds)) {
         return false;
       }
-      if (filters.maxBeds && property.beds > Number(filters.maxBeds)) {
+      if (filters.maxBeds && property.bedrooms > Number(filters.maxBeds)) {
         return false;
       }
 
@@ -82,9 +82,16 @@ export default function PropertiesPage() {
         return false;
       }
 
-      // Date filter
-      if (filters.dateAddedAfter && property.dateAdded < filters.dateAddedAfter) {
-        return false;
+      // Date filter - convert property.added to Date object for comparison
+      if (filters.dateAddedAfter && property.added) {
+        const monthMap = {
+          January: 0, February: 1, March: 2, April: 3, May: 4, June: 5,
+          July: 6, August: 7, September: 8, October: 9, November: 10, December: 11
+        };
+        const propertyDate = new Date(property.added.year, monthMap[property.added.month], property.added.day);
+        if (propertyDate < filters.dateAddedAfter) {
+          return false;
+        }
       }
 
       return true;

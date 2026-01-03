@@ -5,8 +5,8 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 export default function PropertyCard({ property, isFavorite, onToggleFavourite }) {
   const navigate = useNavigate();
-  const imageSrc = property.image && property.image.trim() !== "" ? property.image : heroImage;
-  const bedsLabel = property.beds ? `${property.beds} Beds` : null;
+  const imageSrc = property.picture && property.picture.trim() !== "" ? property.picture : heroImage;
+  const bedsLabel = property.bedrooms ? `${property.bedrooms} Beds` : null;
   const typeLabel = property.type ? property.type : null;
   const tenureLabel = property.tenure ? property.tenure : null;
   const metaLine = [bedsLabel, typeLabel || tenureLabel].filter(Boolean).join(" • ");
@@ -35,14 +35,13 @@ export default function PropertyCard({ property, isFavorite, onToggleFavourite }
       <div className="property-image">
         <img
           src={imageSrc}
-          alt={property.title}
+          alt={property.location}
           onError={(event) => {
             event.currentTarget.onerror = null;
             event.currentTarget.src = heroImage;
           }}
         />
         <div className="title-fav-div">
-          <h3 className="property-title">{property.title}</h3>
           <button
             onClick={onToggleFavourite}
             className={`favorite-button ${isFavorite ? "favorited" : ""}`}

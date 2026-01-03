@@ -26,19 +26,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 15px;
+  gap: 13px;
 }
 
 .short-info h1 {
   margin: 0 0 10px 0;
-  color: #333;
-  font-size: 28px;
+  color: #4e4e4e;
+  font-size: 25px;
 }
 
 .property-type {
   margin: 5px 0;
-  color: #666;
-  font-size: 16px;
+  color: #464646;
+  font-size: 20px;
   font-weight: 500;
 }
 
@@ -47,12 +47,6 @@
   font-size: 28px;
   color: #ff6b6b;
   font-weight: bold;
-}
-
-.property-location {
-  margin: 10px 0;
-  color: #666;
-  font-size: 16px;
 }
 
 .favorite-button {

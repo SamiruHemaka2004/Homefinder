@@ -2,7 +2,7 @@ import "./FavouriteCard.css";
 import heroImage from "../assets/hero-image.png";
 
 export default function FavouriteCard({ property, onRemove }) {
-	const imageSrc = property.image && property.image.trim() !== "" ? property.image : heroImage;
+	const imageSrc = property.picture && property.picture.trim() !== "" ? property.picture : heroImage;
 
 	const handleDragStart = (e) => {
 		if (e.target.closest("button")) {
@@ -23,20 +23,20 @@ export default function FavouriteCard({ property, onRemove }) {
 			<img
 				className="favourite-thumb"
 				src={imageSrc}
-				alt={property.title}
+				alt={property.location}
 				onError={(event) => {
 					event.currentTarget.onerror = null;
 					event.currentTarget.src = heroImage;
 				}}
 			/>
 			<div className="favourite-info">
-				<p className="favourite-title">{property.title}</p>
+			<p className="favourite-title">{property.location}</p>
 				<p className="favourite-price">£{property.price.toLocaleString()}</p>
 			</div>
 			<button
 				className="favourite-remove"
 				onClick={() => onRemove(property.id)}
-				aria-label={`Remove ${property.title} from favourites`}
+				aria-label={`Remove ${property.location} from favourites`}
 			>
 				Remove
 			</button>
