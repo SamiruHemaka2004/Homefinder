@@ -40,6 +40,7 @@
   color: #464646;
   font-size: 20px;
   font-weight: 500;
+  text-align: left;
 }
 
 .property-price {
@@ -47,6 +48,7 @@
   font-size: 28px;
   color: #ff6b6b;
   font-weight: bold;
+  text-align: left;
 }
 
 .favorite-button {
@@ -129,6 +131,7 @@
   margin-bottom: 30px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  text-align: left;
 }
 
 .tab-buttons {
