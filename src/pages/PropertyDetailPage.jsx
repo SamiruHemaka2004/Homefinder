@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { properties } from "../data/properties.js";
+import propertiesData from "../data/properties.json";
 import Header from "../components/header.jsx";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import "./PropertyDetailPage.css";
+
+const properties = propertiesData.properties;
 
 export default function PropertyDetailPage() {
   const { propertyId } = useParams();

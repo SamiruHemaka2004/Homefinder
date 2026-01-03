@@ -4,8 +4,10 @@ import HeroImage from "../components/HeroImage.jsx";
 import SearchForm from "../components/SearchForm.jsx";
 import CardsGrid from "../components/CardsGrid.jsx";
 import FavouriteCard from "../components/FavouriteCard.jsx";
-import { properties } from "../data/properties.js";
+import propertiesData from "../data/properties.json";
 import "./PropertiesPage.css";
+
+const properties = propertiesData.properties;
 
 export default function PropertiesPage() {
   // State to store filter criteria
