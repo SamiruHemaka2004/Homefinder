@@ -3,20 +3,20 @@ import floorplan6 from "../assets/floorPlan/floorplan6.png";
 import floorplan7 from "../assets/floorPlan/floorplan7.png";
 
 // Import house1 gallery images
-import house1_1 from "../assets/gallery/house1/house1.1.jpg";
+import house1_1 from "../assets/gallery/house1/house1.1.png";
 import house1_2 from "../assets/gallery/house1/house1.2.jpg";
 import house1_3 from "../assets/gallery/house1/house1.3.png";
 import house1_4 from "../assets/gallery/house1/house1.4.png";
 import house1_5 from "../assets/gallery/house1/house1.5.png";
 import house1_6 from "../assets/gallery/house1/house1.6.png";
-import house1_7 from "../assets/gallery/house1/house1.7.png";
+import house1_7 from "../assets/gallery/house1/house1.7.jpg";
 
 // Import flat1 gallery images
-import flat1_1 from "../assets/gallery/flat1/flat1.1.jpg";
+import flat1_1 from "../assets/gallery/flat1/flat1.1.png";
 import flat1_2 from "../assets/gallery/flat1/flat1.2.png";
 import flat1_3 from "../assets/gallery/flat1/flat1.3.png";
 import flat1_4 from "../assets/gallery/flat1/flat1.4.png";
-import flat1_5 from "../assets/gallery/flat1/flat1.5.png";
+import flat1_5 from "../assets/gallery/flat1/flat1.5.jpg";
 import flat1_6 from "../assets/gallery/flat1/flat1.6.png";
 
 // Map floorplan paths to imported images
@@ -29,18 +29,18 @@ const floorplanMap = {
 
 // Map gallery image paths to imported images
 const imageMap = {
-  "./assets/gallery/house/house1.1.jpg": house1_1,
+  "./assets/gallery/house/house1.1.png": house1_1,
   "./assets/gallery/house/house1.2.jpg": house1_2,
   "./assets/gallery/house/house1.3.png": house1_3,
   "./assets/gallery/house/house1.4.png": house1_4,
   "./assets/gallery/house/house1.5.png": house1_5,
   "./assets/gallery/house/house1.6.png": house1_6,
-  "./assets/gallery/house/house1.7.png": house1_7,
-  "./assets/gallery/flat/flat1.1.jpg": flat1_1,
+  "./assets/gallery/house/house1.7.jpg": house1_7,
+  "./assets/gallery/flat/flat1.1.png": flat1_1,
   "./assets/gallery/flat/flat1.2.png": flat1_2,
   "./assets/gallery/flat/flat1.3.png": flat1_3,
   "./assets/gallery/flat/flat1.4.png": flat1_4,
-  "./assets/gallery/flat/flat1.5.png": flat1_5,
+  "./assets/gallery/flat/flat1.5.jpg": flat1_5,
   "./assets/gallery/flat/flat1.6.png": flat1_6,
 };
 

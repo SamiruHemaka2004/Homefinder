@@ -11,15 +11,15 @@
       "longDescription": "Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior. The property is set back from the road with a spacious front drive providing excellent off road parking and a detached single garage. The rear garden is well stocked with mature plants and trees providing pleasant views.",
       "location": "Petts Wood Road, Petts Wood, Orpington BR5",
       "postcode": "BR5 1PQ",
-      "image": "./assets/gallery/house/house1.7.png",
+      "image": "./assets/gallery/house/house1.1.png",
       "images": [
-        "./assets/gallery/house/house1.1.jpg",
+        "./assets/gallery/house/house1.1.png",
         "./assets/gallery/house/house1.2.jpg",
         "./assets/gallery/house/house1.3.png",
         "./assets/gallery/house/house1.4.png",
         "./assets/gallery/house/house1.5.png",
         "./assets/gallery/house/house1.6.png",
-        "./assets/gallery/house/house1.7.png"
+        "./assets/gallery/house/house1.7.jpg"
       ],
       "floorPlan": "src\\assets\\floorPlan\\floorplan6.png",
       "googleMapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.9876543210!2d0.03628!3d51.39589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a3c5a3c5a3c5%3A0x0!2sPetts%20Wood!5e0!3m2!1sen!2suk!4v1234567890",
@@ -41,13 +41,13 @@
       "longDescription": "Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms. This apartment being only five years old, is still under a 10 year building guarantee. The property benefits from being in a secure gated complex with communal gardens and an allocated parking space.",
       "location": "Crofton Road Orpington BR6",
       "postcode": "BR6 8TZ",
-      "image": "./assets/gallery/flat/flat1.5.png",
+      "image": "./assets/gallery/flat/flat1.1.png",
       "images": [
-        "./assets/gallery/flat/flat1.1.jpg",
+        "./assets/gallery/flat/flat1.1.png",
         "./assets/gallery/flat/flat1.2.png",
         "./assets/gallery/flat/flat1.3.png",
         "./assets/gallery/flat/flat1.4.png",
-        "./assets/gallery/flat/flat1.5.png",
+        "./assets/gallery/flat/flat1.5.jpg",
         "./assets/gallery/flat/flat1.6.png"
       ],
       "floorPlan": "./assets/floorPlan/floorplan7.png",
