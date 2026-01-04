@@ -24,7 +24,7 @@ ul {
 }
 .websiteLogo {
   height: 10vh;
-  pointer-events: none;
+  cursor: pointer;
 }
 
 body {

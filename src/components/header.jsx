@@ -21,6 +21,7 @@ function Header() {
               className="websiteLogo"
               src={websiteLogo}
               alt="App Logo"
+              style={{ cursor: 'pointer' }}
             />
           </button>
         </div>
