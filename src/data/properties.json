@@ -3,23 +3,23 @@
     {
       "id": "prop1",
       "type": "House",
-      "bedrooms":3,
+      "bedrooms": 3,
       "price": 750000,
       "tenure": "Freehold",
-      "description":"Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
+      "description": "Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
       "location": "Petts Wood Road, Petts Wood, Orpington BR5",
       "postcode": "BR5 1PQ",
-      "picture": "/assets/gallery/house1/house1.1.png",
+      "picture": "/Homefinder/assets/gallery/house1/house1.1.png",
       "images": [
-        "/assets/gallery/house1/house1.1.png",
-        "/assets/gallery/house1/house1.2.jpg",
-        "/assets/gallery/house1/house1.3.png",
-        "/assets/gallery/house1/house1.4.png",
-        "/assets/gallery/house1/house1.5.png",
-        "/assets/gallery/house1/house1.6.png",
-        "/assets/gallery/house1/house1.7.jpg"
+        "/Homefinder/assets/gallery/house1/house1.1.png",
+        "/Homefinder/assets/gallery/house1/house1.2.jpg",
+        "/Homefinder/assets/gallery/house1/house1.3.png",
+        "/Homefinder/assets/gallery/house1/house1.4.png",
+        "/Homefinder/assets/gallery/house1/house1.5.png",
+        "/Homefinder/assets/gallery/house1/house1.6.png",
+        "/Homefinder/assets/gallery/house1/house1.7.jpg"
       ],
-      "floorPlan": "/assets/floorPlan/floorplan6.png",
+      "floorPlan": "/Homefinder/assets/floorPlan/floorplan6.png",
       "googleMapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.9876543210!2d0.03628!3d51.39589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a3c5a3c5a3c5%3A0x0!2sPetts%20Wood!5e0!3m2!1sen!2suk!4v1234567890",
       "added": {
         "month": "October",
@@ -33,19 +33,19 @@
       "bedrooms": 2,
       "price": 399995,
       "tenure": "Freehold",
-      "description":"Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee...",
+      "description": "Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee...",
       "location": "Crofton Road Orpington BR6",
       "postcode": "BR6 8TZ",
-      "picture": "/assets/gallery/flat1/flat1.1.png",
+      "picture": "/Homefinder/assets/gallery/flat1/flat1.1.png",
       "images": [
-        "/assets/gallery/flat1/flat1.1.png",
-        "/assets/gallery/flat1/flat1.2.png",
-        "/assets/gallery/flat1/flat1.3.png",
-        "/assets/gallery/flat1/flat1.4.png",
-        "/assets/gallery/flat1/flat1.5.jpg",
-        "/assets/gallery/flat1/flat1.6.png"
+        "/Homefinder/assets/gallery/flat1/flat1.1.png",
+        "/Homefinder/assets/gallery/flat1/flat1.2.png",
+        "/Homefinder/assets/gallery/flat1/flat1.3.png",
+        "/Homefinder/assets/gallery/flat1/flat1.4.png",
+        "/Homefinder/assets/gallery/flat1/flat1.5.jpg",
+        "/Homefinder/assets/gallery/flat1/flat1.6.png"
       ],
-      "floorPlan": "/assets/floorPlan/floorplan7.png",
+      "floorPlan": "/Homefinder/assets/floorPlan/floorplan7.png",
       "googleMapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.2345678901!2d0.1067!3d51.3909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a8c5a3c5a3c5%3A0x0!2sCrofton%20Road!5e0!3m2!1sen!2suk!4v1234567890",
       "added": {
         "month": "September",
@@ -55,165 +55,161 @@
     },
 
     {
-  "id": "prop3",
-  "type": "House",
-  "bedrooms": 4,
-  "price": 980000,
-  "tenure": "Freehold",
-  "description": "Modern four bedroom detached house featuring open-plan living, private garden, and off-street parking.",
-  "location": "Oak Drive, Bromley",
-  "postcode": "BR2 9LT",
-  "picture": "/assets/gallery/house2/house2.7.png",
-  "images": [
-        "/assets/gallery/house2/house2.7.png",
-        "/assets/gallery/house2/house2.2.jpg",
-        "/assets/gallery/house2/house2.3.jpg",
-        "/assets/gallery/house2/house2.4.jpg",
-        "/assets/gallery/house2/house2.5.png",
-        "/assets/gallery/house2/house2.6.png",
-        "/assets/gallery/house2/house2.1.jpg"
-  ],
-  "floorPlan": "/assets/floorPlan/floorplan1.png",
-  "googleMapUrl": "https://www.google.com/maps/embed?...",
-  "added": {
-    "month": "March",
-    "day": 3,
-    "year": 2023
-  }
-},
-{
-  "id": "prop4",
-  "type": "House",
-  "bedrooms": 2,
-  "price": 465000,
-  "tenure": "Freehold",
-  "description": "Charming two bedroom terraced house with period features, recently renovated kitchen, and rear garden.",
-  "location": "Maple Street, Greenwich",
-  "postcode": "SE10 8QA",
-  "picture": "/assets/gallery/house3/house3.6.png",
-  "images": [
-        "/assets/gallery/house3/house3.6.png",
-        "/assets/gallery/house3/house3.2.jpg",
-        "/assets/gallery/house3/house3.3.jpg",
-        "/assets/gallery/house3/house3.4.png",
-        "/assets/gallery/house3/house3.5.png",
-        "/assets/gallery/house3/house3.1.jpg"
-  ],
-  "floorPlan": "/assets/floorPlan/floorplan2.png",
-  "googleMapUrl": "https://www.google.com/maps/embed?...",
-  "added": {
-    "month": "July",
-    "day": 21,
-    "year": 2024
-  }
-},
-{
-  "id": "prop5",
-  "type": "House",
-  "bedrooms": 3,
-  "price": 610000,
-  "tenure": "Freehold",
-  "description": "Charming rustic wooden house featuring a large stone chimney, pitched roof, and a covered front porch. Set in a peaceful countryside location, the property offers traditional character, natural materials, and scenic surroundings ideal for quiet family living.",
-  "location": "Meadow Lane, Countryside Estate",
-  "postcode": "CT4 7RL",
-  "picture": "/assets/gallery/house4/house4.6.png",
-  "images": [
-        "/assets/gallery/house4/house4.6.png",
-        "/assets/gallery/house4/house4.2.png",
-        "/assets/gallery/house4/house4.3.png",
-        "/assets/gallery/house4/house4.4.png",
-        "/assets/gallery/house4/house4.5.png",
-        "/assets/gallery/house4/house4.1.jpg"
-  ],
-  "floorPlan": "/assets/floorPlan/floorplan3.png",
-  "googleMapUrl": "https://www.google.com/maps/embed?...",
-  "added": {
-    "month": "February",
-    "day": 9,
-    "year": 2024
-  }
-},
-{
-  "id": "prop6",
-  "type": "Flat",
-  "bedrooms": 2,
-  "price": 540000,
-  "tenure": "Leasehold",
-  "description": "Modern two bedroom flat located in a contemporary brick-built apartment complex. The property features private balconies, large windows for natural light, and access to well-maintained communal green spaces.",
-  "location": "Riverside Court, City Suburbs",
-  "postcode": "SE8 4FD",
-  "picture": "/assets/gallery/flat2/flat2.1.jpg",
-  "images": [
-        "/assets/gallery/flat2/flat2.1.jpg",
-        "/assets/gallery/flat2/flat2.2.jpg",
-        "/assets/gallery/flat2/flat2.3.png",
-        "/assets/gallery/flat2/flat2.4.png",
-        "/assets/gallery/flat2/flat2.5.png",
-        "/assets/gallery/flat2/flat2.6.png"
-  ],
-  "floorPlan": "/assets/floorPlan/floorplan2.png",
-  "googleMapUrl": "https://www.google.com/maps/embed?...",
-  "added": {
-    "month": "August",
-    "day": 14,
-    "year": 2023
-  }
-},
-{
-  "id": "prop7",
-  "type": "Flat",
-  "bedrooms": 3,
-  "price": 620000,
-  "tenure": "Leasehold",
-  "description": "Stylish three bedroom flat set within a modern low-rise residential development. The property features private balconies, contemporary architecture, landscaped gardens, and a quiet residential street ideal for comfortable urban living.",
-  "location": "Palm View Residences, Green Park",
-  "postcode": "SW11 3AB",
-  "picture": "/assets/gallery/flat3/flat3.6.png",
-  "images": [
-    "/assets/gallery/flat3/flat3.6.png",
-        "/assets/gallery/flat3/flat3.2.png",
-        "/assets/gallery/flat3/flat3.3.png",
-        "/assets/gallery/flat3/flat3.4.png",
-        "/assets/gallery/flat3/flat3.5.png",
-        "/assets/gallery/flat3/flat3.1.jpg"
-  ],
-  "floorPlan": "/assets/floorPlan/floorplan7.png",
-  "googleMapUrl": "https://www.google.com/maps/embed?...",
-  "added": {
-    "month": "May",
-    "day": 22,
-    "year": 2024
-  }
-},
-{
-  "id": "prop8",
-  "type": "Flat",
-  "bedrooms": 1,
-  "price": 395000,
-  "tenure": "Leasehold",
-  "description": "Contemporary one bedroom flat designed for modern city living. Features include a private balcony, open-plan living space, floor-to-ceiling windows, and access to shared landscaped areas within the development.",
-  "location": "City Edge Apartments, Central District",
-  "postcode": "E1 6AN",
-  "picture": "/assets/gallery/flat4/flat4.6.png",
-  "images": [
-    "/assets/gallery/flat4/flat4.6.png",
-        "/assets/gallery/flat4/flat4.2.png",
-        "/assets/gallery/flat4/flat4.3.png",
-        "/assets/gallery/flat4/flat4.4.png",
-        "/assets/gallery/flat4/flat4.5.png",
-        "/assets/gallery/flat4/flat4.1.jpg"
-  ],
-  "floorPlan": "/assets/floorPlan/floorplan1.png",
-  "googleMapUrl": "https://www.google.com/maps/embed?...",
-  "added": {
-    "month": "November",
-    "day": 8,
-    "year": 2023
-  }
-}
-
-
-
-
+      "id": "prop3",
+      "type": "House",
+      "bedrooms": 4,
+      "price": 980000,
+      "tenure": "Freehold",
+      "description": "Modern four bedroom detached house featuring open-plan living, private garden, and off-street parking.",
+      "location": "Oak Drive, Bromley",
+      "postcode": "BR2 9LT",
+      "picture": "/Homefinder/assets/gallery/house2/house2.7.png",
+      "images": [
+        "/Homefinder/assets/gallery/house2/house2.7.png",
+        "/Homefinder/assets/gallery/house2/house2.2.jpg",
+        "/Homefinder/assets/gallery/house2/house2.3.jpg",
+        "/Homefinder/assets/gallery/house2/house2.4.jpg",
+        "/Homefinder/assets/gallery/house2/house2.5.png",
+        "/Homefinder/assets/gallery/house2/house2.6.png",
+        "/Homefinder/assets/gallery/house2/house2.1.jpg"
+      ],
+      "floorPlan": "/Homefinder/assets/floorPlan/floorplan1.png",
+      "googleMapUrl": "https://www.google.com/maps/embed?...",
+      "added": {
+        "month": "March",
+        "day": 3,
+        "year": 2023
+      }
+    },
+    {
+      "id": "prop4",
+      "type": "House",
+      "bedrooms": 2,
+      "price": 465000,
+      "tenure": "Freehold",
+      "description": "Charming two bedroom terraced house with period features, recently renovated kitchen, and rear garden.",
+      "location": "Maple Street, Greenwich",
+      "postcode": "SE10 8QA",
+      "picture": "/Homefinder/assets/gallery/house3/house3.6.png",
+      "images": [
+        "/Homefinder/assets/gallery/house3/house3.6.png",
+        "/Homefinder/assets/gallery/house3/house3.2.jpg",
+        "/Homefinder/assets/gallery/house3/house3.3.jpg",
+        "/Homefinder/assets/gallery/house3/house3.4.png",
+        "/Homefinder/assets/gallery/house3/house3.5.png",
+        "/Homefinder/assets/gallery/house3/house3.1.jpg"
+      ],
+      "floorPlan": "/Homefinder/assets/floorPlan/floorplan2.png",
+      "googleMapUrl": "https://www.google.com/maps/embed?...",
+      "added": {
+        "month": "July",
+        "day": 21,
+        "year": 2024
+      }
+    },
+    {
+      "id": "prop5",
+      "type": "House",
+      "bedrooms": 3,
+      "price": 610000,
+      "tenure": "Freehold",
+      "description": "Charming rustic wooden house featuring a large stone chimney, pitched roof, and a covered front porch. Set in a peaceful countryside location, the property offers traditional character, natural materials, and scenic surroundings ideal for quiet family living.",
+      "location": "Meadow Lane, Countryside Estate",
+      "postcode": "CT4 7RL",
+      "picture": "/Homefinder/assets/gallery/house4/house4.6.png",
+      "images": [
+        "/Homefinder/assets/gallery/house4/house4.6.png",
+        "/Homefinder/assets/gallery/house4/house4.2.png",
+        "/Homefinder/assets/gallery/house4/house4.3.png",
+        "/Homefinder/assets/gallery/house4/house4.4.png",
+        "/Homefinder/assets/gallery/house4/house4.5.png",
+        "/Homefinder/assets/gallery/house4/house4.1.jpg"
+      ],
+      "floorPlan": "/Homefinder/assets/floorPlan/floorplan3.png",
+      "googleMapUrl": "https://www.google.com/maps/embed?...",
+      "added": {
+        "month": "February",
+        "day": 9,
+        "year": 2024
+      }
+    },
+    {
+      "id": "prop6",
+      "type": "Flat",
+      "bedrooms": 2,
+      "price": 540000,
+      "tenure": "Leasehold",
+      "description": "Modern two bedroom flat located in a contemporary brick-built apartment complex. The property features private balconies, large windows for natural light, and access to well-maintained communal green spaces.",
+      "location": "Riverside Court, City Suburbs",
+      "postcode": "SE8 4FD",
+      "picture": "/Homefinder/assets/gallery/flat2/flat2.1.jpg",
+      "images": [
+        "/Homefinder/assets/gallery/flat2/flat2.1.jpg",
+        "/Homefinder/assets/gallery/flat2/flat2.2.jpg",
+        "/Homefinder/assets/gallery/flat2/flat2.3.png",
+        "/Homefinder/assets/gallery/flat2/flat2.4.png",
+        "/Homefinder/assets/gallery/flat2/flat2.5.png",
+        "/Homefinder/assets/gallery/flat2/flat2.6.png"
+      ],
+      "floorPlan": "/Homefinder/assets/floorPlan/floorplan2.png",
+      "googleMapUrl": "https://www.google.com/maps/embed?...",
+      "added": {
+        "month": "August",
+        "day": 14,
+        "year": 2023
+      }
+    },
+    {
+      "id": "prop7",
+      "type": "Flat",
+      "bedrooms": 3,
+      "price": 620000,
+      "tenure": "Leasehold",
+      "description": "Stylish three bedroom flat set within a modern low-rise residential development. The property features private balconies, contemporary architecture, landscaped gardens, and a quiet residential street ideal for comfortable urban living.",
+      "location": "Palm View Residences, Green Park",
+      "postcode": "SW11 3AB",
+      "picture": "/Homefinder/assets/gallery/flat3/flat3.6.png",
+      "images": [
+        "/Homefinder/assets/gallery/flat3/flat3.6.png",
+        "/Homefinder/assets/gallery/flat3/flat3.2.png",
+        "/Homefinder/assets/gallery/flat3/flat3.3.png",
+        "/Homefinder/assets/gallery/flat3/flat3.4.png",
+        "/Homefinder/assets/gallery/flat3/flat3.5.png",
+        "/Homefinder/assets/gallery/flat3/flat3.1.jpg"
+      ],
+      "floorPlan": "/Homefinder/assets/floorPlan/floorplan7.png",
+      "googleMapUrl": "https://www.google.com/maps/embed?...",
+      "added": {
+        "month": "May",
+        "day": 22,
+        "year": 2024
+      }
+    },
+    {
+      "id": "prop8",
+      "type": "Flat",
+      "bedrooms": 1,
+      "price": 395000,
+      "tenure": "Leasehold",
+      "description": "Contemporary one bedroom flat designed for modern city living. Features include a private balcony, open-plan living space, floor-to-ceiling windows, and access to shared landscaped areas within the development.",
+      "location": "City Edge Apartments, Central District",
+      "postcode": "E1 6AN",
+      "picture": "/Homefinder/assets/gallery/flat4/flat4.6.png",
+      "images": [
+        "/Homefinder/assets/gallery/flat4/flat4.6.png",
+        "/Homefinder/assets/gallery/flat4/flat4.2.png",
+        "/Homefinder/assets/gallery/flat4/flat4.3.png",
+        "/Homefinder/assets/gallery/flat4/flat4.4.png",
+        "/Homefinder/assets/gallery/flat4/flat4.5.png",
+        "/Homefinder/assets/gallery/flat4/flat4.1.jpg"
+      ],
+      "floorPlan": "/Homefinder/assets/floorPlan/floorplan1.png",
+      "googleMapUrl": "https://www.google.com/maps/embed?...",
+      "added": {
+        "month": "November",
+        "day": 8,
+        "year": 2023
+      }
+    }
   ]
 }

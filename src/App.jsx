@@ -8,7 +8,7 @@ import "./App.css";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Homefinder">
       <Header />
       <Routes>
         <Route path="/" element={<PropertiesPage />} />

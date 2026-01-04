@@ -25,6 +25,8 @@ export default function PropertiesPage() {
     return stored ? JSON.parse(stored) : [];
   });
 
+  const [dragOverFavPanel, setDragOverFavPanel] = useState(false);
+
   // Sync favourites with localStorage
   useEffect(() => {
     localStorage.setItem("favourites", JSON.stringify(favourites));
@@ -163,13 +165,20 @@ export default function PropertiesPage() {
         </div>
 
         <aside 
-          className="favourites-panel"
+          className={`favourites-panel ${dragOverFavPanel ? 'drag-over' : ''}`}
           onDragOver={(e) => {
             e.preventDefault();
             e.dataTransfer.dropEffect = "copy";
+            setDragOverFavPanel(true);
+          }}
+          onDragLeave={(e) => {
+            if (e.currentTarget === e.target) {
+              setDragOverFavPanel(false);
+            }
           }}
           onDrop={(e) => {
             e.preventDefault();
+            setDragOverFavPanel(false);
             try {
               const droppedProperty = JSON.parse(e.dataTransfer.getData("application/json"));
               if (droppedProperty && droppedProperty.id) {
