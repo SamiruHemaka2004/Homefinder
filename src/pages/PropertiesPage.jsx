@@ -112,6 +112,26 @@ export default function PropertiesPage() {
     setFavourites((current) => current.filter((item) => item.id !== id));
   };
 
+  const addToFavourites = (property) => {
+    setFavourites((current) => {
+      const isSaved = current.some((item) => item.id === property.id);
+      if (!isSaved) {
+        return [...current, property];
+      }
+      return current;
+    });
+  };
+
+  const removeFromFavourites = (property) => {
+    setFavourites((current) => {
+      const isSaved = current.some((item) => item.id === property.id);
+      if (isSaved) {
+        return current.filter((item) => item.id !== property.id);
+      }
+      return current;
+    });
+  };
+
   return (
     <>
       <HeroImage />
@@ -128,9 +148,7 @@ export default function PropertiesPage() {
             try {
               const droppedProperty = JSON.parse(e.dataTransfer.getData("application/json"));
               if (droppedProperty && droppedProperty.id) {
-                if (favourites.some((fav) => fav.id === droppedProperty.id)) {
-                  toggleFavourite(droppedProperty);
-                }
+                removeFromFavourites(droppedProperty);
               }
             } catch (err) {
               console.log("Drop error:", err);
@@ -155,9 +173,7 @@ export default function PropertiesPage() {
             try {
               const droppedProperty = JSON.parse(e.dataTransfer.getData("application/json"));
               if (droppedProperty && droppedProperty.id) {
-                if (!favourites.some((fav) => fav.id === droppedProperty.id)) {
-                  toggleFavourite(droppedProperty);
-                }
+                addToFavourites(droppedProperty);
               }
             } catch (err) {
               console.log("Drop error:", err);
