@@ -6,7 +6,7 @@
   background: linear-gradient(
     180deg,
     rgba(255, 218, 188, 0.6),
-    rgba(255, 141, 65, 0.6)
+    rgba(199, 103, 39, 0.6)
   );
   backdrop-filter: blur(4px);
   border: #ffeee7 solid 1px;
@@ -66,11 +66,11 @@
 }
 .reset-button {
   color: #ffeee7;
-  background-color: #6b2c08;
+  background-color: #ff6600;
   margin-top: 20px;
 }
 .reset-button:hover {
-  background-color: #eb691e;
+  background-color: #cc520b;
   color: #ffeee7;
 }
 .minBeds,
