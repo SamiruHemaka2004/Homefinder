@@ -143,17 +143,22 @@ export default function PropertiesPage() {
           className="cards-column"
           onDragOver={(e) => {
             e.preventDefault();
+            e.stopPropagation();
             e.dataTransfer.dropEffect = "move";
           }}
           onDrop={(e) => {
             e.preventDefault();
-            try {
-              const droppedProperty = JSON.parse(e.dataTransfer.getData("application/json"));
-              if (droppedProperty && droppedProperty.id) {
-                removeFromFavourites(droppedProperty);
+            e.stopPropagation();
+            const data = e.dataTransfer.getData("application/json");
+            if (data) {
+              try {
+                const droppedProperty = JSON.parse(data);
+                if (droppedProperty && droppedProperty.id) {
+                  removeFromFavourites(droppedProperty);
+                }
+              } catch (err) {
+                console.log("Drop error:", err);
               }
-            } catch (err) {
-              console.log("Drop error:", err);
             }
           }}
         >
@@ -168,24 +173,34 @@ export default function PropertiesPage() {
           className={`favourites-panel ${dragOverFavPanel ? 'drag-over' : ''}`}
           onDragOver={(e) => {
             e.preventDefault();
+            e.stopPropagation();
             e.dataTransfer.dropEffect = "copy";
-            setDragOverFavPanel(true);
+            if (!dragOverFavPanel) {
+              setDragOverFavPanel(true);
+            }
           }}
           onDragLeave={(e) => {
-            if (e.currentTarget === e.target) {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const x = e.clientX;
+            const y = e.clientY;
+            if (x <= rect.left || x >= rect.right || y <= rect.top || y >= rect.bottom) {
               setDragOverFavPanel(false);
             }
           }}
           onDrop={(e) => {
             e.preventDefault();
+            e.stopPropagation();
             setDragOverFavPanel(false);
-            try {
-              const droppedProperty = JSON.parse(e.dataTransfer.getData("application/json"));
-              if (droppedProperty && droppedProperty.id) {
-                addToFavourites(droppedProperty);
+            const data = e.dataTransfer.getData("application/json");
+            if (data) {
+              try {
+                const droppedProperty = JSON.parse(data);
+                if (droppedProperty && droppedProperty.id) {
+                  addToFavourites(droppedProperty);
+                }
+              } catch (err) {
+                console.log("Drop error:", err);
               }
-            } catch (err) {
-              console.log("Drop error:", err);
             }
           }}
         >
