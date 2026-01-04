@@ -1,5 +1,4 @@
 import { useMemo, useState, useEffect } from "react";
-import Header from "../components/header.jsx";
 import HeroImage from "../components/HeroImage.jsx";
 import SearchForm from "../components/SearchForm.jsx";
 import CardsGrid from "../components/CardsGrid.jsx";
@@ -115,7 +114,6 @@ export default function PropertiesPage() {
 
   return (
     <>
-      <Header />
       <HeroImage />
       <SearchForm filters={filters} setFilters={setFilters} />
       <div className="page-layout">

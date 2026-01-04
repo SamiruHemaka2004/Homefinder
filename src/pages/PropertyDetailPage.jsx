@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import propertiesData from "../data/properties.json";
-import Header from "../components/header.jsx";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import "./PropertyDetailPage.css";
 
@@ -41,7 +40,6 @@ export default function PropertyDetailPage() {
   if (!property) {
     return (
       <>
-        <Header />
         <div className="detail-container">
           <p className="error-message">Property not found</p>
           <button className="back-button" onClick={() => navigate("/")}>

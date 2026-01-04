@@ -13,7 +13,6 @@ const team = [
 export default function AboutPage() {
   return (
     <>
-      <Header />
       <main className="about-shell">
         <AboutHero />
         <AboutValue />
