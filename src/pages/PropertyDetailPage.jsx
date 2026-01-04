@@ -51,7 +51,6 @@ export default function PropertyDetailPage() {
   }
   return (
     <>
-      <Header />
       <div className="detail-container">
         {/* MAIN IMAGE SECTION */}
         <div className="image-section">
