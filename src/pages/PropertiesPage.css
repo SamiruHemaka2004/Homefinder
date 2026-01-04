@@ -18,12 +18,22 @@
   position: sticky;
   top: 20px;
   background: #ffffff;
-  border: 1px solid #ececec;
+  border: 2px solid #a3450e;
   border-radius: 40px;
   padding: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  border: 2px solid #a3450e;
   background-color: rgb(248, 239, 232);
+  transition: all 0.3s ease;
+  min-height: 200px;
+  max-height: none;
+  overflow-y: auto;
+}
+
+.favourites-panel.drag-over {
+  background-color: #fff4ed;
+  border-color: #ff7402;
+  box-shadow: 0 0 20px rgba(255, 116, 2, 0.3);
+  transform: scale(1.02);
 }
 
 .favourites-header {
@@ -53,6 +63,8 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  max-height: 500px;
+  overflow-y: auto;
 }
 
 .favourites-empty {
