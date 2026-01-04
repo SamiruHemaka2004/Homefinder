@@ -1,44 +1,67 @@
-import { useState } from 'react';
-import './PropertyCard.css';
+import "./PropertyCard.css";
+import { useNavigate } from "react-router-dom";
 import heroImage from "../assets/hero-image.png";
-import { FaRegHeart, FaHeart } from 'react-icons/fa';
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 
+export default function PropertyCard({ property, isFavorite, onToggleFavourite }) {
+  const navigate = useNavigate();
+  const imageSrc = property.picture && property.picture.trim() !== "" ? property.picture : heroImage;
+  const bedsLabel = property.bedrooms ? `${property.bedrooms} Beds` : null;
+  const typeLabel = property.type ? property.type : null;
+  const tenureLabel = property.tenure ? property.tenure : null;
+  const metaLine = [bedsLabel, typeLabel || tenureLabel].filter(Boolean).join(" • ");
 
-export default function MediaCard({property}) {
-  // Initialize state for the favorite status (false for unfavorited)
-  const [isFavorite, setIsFavorite] = useState(false);
+  const handleViewDetails = () => {
+    navigate(`/property/${property.id}`);
+  };
 
-  // Function to handle the click event and toggle the state
-  const handleClick = () => {
-    setIsFavorite(!isFavorite);
-    // You can add logic here to interact with an API or update a parent component's state
-    console.log(`Item is now ${isFavorite ? 'unfavorited' : 'favorited'}`);
+  const handleDragStart = (e) => {
+    // Only allow drag if not clicking on buttons
+    if (e.target.closest("button")) {
+      e.preventDefault();
+      return;
+    }
+    e.dataTransfer.effectAllowed = "copy";
+    e.dataTransfer.setData("application/json", JSON.stringify(property));
   };
 
   return (
-    <div className="property-card">
-        <div className="property-image">
-            <img src={heroImage} alt="Property" />
-            <div className='title-fav-div'>
-                <h3 className="property-title">{property.title}</h3>
-                <button onClick={handleClick}
-                className={`favorite-button ${isFavorite ? 'favorited' : ''}`}
-                aria-label={isFavorite ? "Unfavorite" : "Favorite"}
-                >
-                {/* Conditionally render the filled or outlined heart icon */}
-                {isFavorite ? <FaHeart /> : <FaRegHeart />}
-                </button>
-            </div>
+    <div 
+      className="property-card"
+      draggable="true"
+      onDragStart={handleDragStart}
+      style={{ cursor: "grab" }}
+    >
+      <div className="property-image">
+        <img
+          src={imageSrc}
+          alt={property.location}
+          onError={(event) => {
+            event.currentTarget.onerror = null;
+            event.currentTarget.src = heroImage;
+          }}
+        />
+        <div className="title-fav-div">
+          <button
+            onClick={onToggleFavourite}
+            className={`favorite-button ${isFavorite ? "favorited" : ""}`}
+            aria-label={isFavorite ? "Remove from favourites" : "Add to favourites"}
+          >
+            {isFavorite ? <FaHeart /> : <FaRegHeart />}
+          </button>
         </div>
-        <div className="property-details">
-            <p className="property-price">£{property.price.toLocaleString()}</p>
-            <p className="property-beds">{property.beds} Beds • {property.baths} Baths • {property.sqft} sqft</p>
-            <p className="property-postcode">Postcode: {property.postcode}</p>
-        </div>
-        <div>
-            <button className="view-details-button">View Details</button>
-            <button className="contact-agent-button">Contact Agent</button>
-        </div>
+      </div>
+      <div className="property-details">
+        <p className="property-price">£{property.price.toLocaleString()}</p>
+        {metaLine && <p className="property-beds">{metaLine}</p>}
+        {property.location && <p className="property-postcode">{property.location}</p>}
+      </div>
+      <div className="property-actions">
+        <button className="view-details-button" onClick={handleViewDetails}>
+          View Details
+        </button>
+        <button className="contact-agent-button">Contact Agent</button>
+      </div>
     </div>
   );
 }

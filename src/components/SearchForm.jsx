@@ -50,6 +50,7 @@ export default function SearchForm({ filters, setFilters }) {
                 options={typeOptions}
                 onChange={handleTypeChange}
                 placeholder="Select Type"
+                className="type-select"  
               />
             </div>
 
@@ -69,6 +70,30 @@ export default function SearchForm({ filters, setFilters }) {
                   placeholder="Max"
                   value={filters.maxPrice}
                   onChange={handleChange}
+                />
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label>Bedrooms</label>
+              <div className="row">
+                <input
+                  type="number"
+                  className="minBeds"
+                  name="minBeds"
+                  placeholder="Min"
+                  value={filters.minBeds}
+                  onChange={handleChange}
+                  min="0"
+                />
+                <input
+                  type="number"
+                  className="maxBeds"
+                  name="maxBeds"
+                  placeholder="Max"
+                  value={filters.maxBeds}
+                  onChange={handleChange}
+                  min="0"
                 />
               </div>
             </div>

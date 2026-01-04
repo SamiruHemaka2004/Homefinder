@@ -1,0 +1,8 @@
+.about-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 48px 18px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}

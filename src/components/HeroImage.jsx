@@ -15,7 +15,7 @@ function HeroImage() {
           <img className="heroImage" src={heroImage} alt="Hero" />
 
           <h2 className="heroTitle">
-            Believe in finding it with the UK’s largest choice of homes
+            <span style={{ color: "#ff7708ff"}}>Believe</span> in finding it with the UK’s largest choice of homes
           </h2>
         </div>
       </Container>
