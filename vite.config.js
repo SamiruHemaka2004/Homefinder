@@ -14,6 +14,5 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: './src/setupTests.js',
     globals: true
-  },
-  base: process.env.VITE_BASE_PATH || "/Homefinder",
+  }
 })
